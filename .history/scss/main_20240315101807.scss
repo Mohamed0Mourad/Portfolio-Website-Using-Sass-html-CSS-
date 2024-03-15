@@ -1,0 +1,216 @@
+//import config file
+@import "config";
+//import utitlity
+@import "utilities";
+//general style
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    font-family: "Dosis", sans-serif;
+    line-height: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-color;
+}
+
+ul {
+    list-style: none;
+}
+
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+}
+
+//logo
+#logo {
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+//main nav
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    ul {
+        display: flex;
+    }
+    li {
+        padding: 1rem 1.5rem;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        border-bottom: 3px transparent solid;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+        &:hover {
+            border-color: $medium-color;
+        }
+        &.current {
+            border-color: $main-color;
+        }
+    }
+}
+
+//header
+#header {
+    &-home {
+        background: $bg-image no-repeat center right/cover;
+        height: 100vh;
+        color: #fff;
+        // header content
+        .header-content {
+            text-align: center;
+            padding-top: 20%;
+            h1 {
+                font-size: 4rem;
+                line-height: 1.2;
+            }
+        }
+    }
+    &-inner {
+        background: $bg-image no-repeat 20% 30% / cover;
+        height: 5.5rem;
+        border-bottom: 3px solid $main-color;
+    }
+}
+
+// home
+#home {
+    &-a {
+        .specials {
+            margin-top: 3rem;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .fas {
+            color: $main-color;
+            padding-bottom: 0.4rem;
+        }
+    }
+    &-b {
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            li {
+                line-height: 2;
+                &.stats-title {
+                    font-size: 1.5rem;
+                }
+                &.stats-number {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+            }
+            div {
+                padding: 3rem 0;
+                &:nth-child(odd) {
+                    background: $light-color;
+                }
+                &:nth-child(even) {
+                    background-color: $medium-color;
+                }
+            }
+        }
+    }
+    &-c {
+        .process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1.5rem;
+            text-align: center;
+            &-step {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                font-size: 28px;
+                background: $main-color;
+                border-radius: 50%;
+                height: 15px;
+                width: 15px;
+                line-height: 15px;
+                padding: 1rem;
+                // text-align: center;
+                transition: all 1s;
+            }
+            &-icon {
+                position: relative;
+                border-radius: 50%;
+                height: 70px;
+                width: 70px;
+                line-height: 70px;
+                background: $dark-color;
+                color: #fff;
+                padding: 2rem;
+                text-align: center;
+                transition: all 1s;
+                &:hover {
+                    background: $main-color;
+                    width: 90px;
+                    height: 90px;
+                    line-height: 90px;
+                    .process-step {
+                        background: $dark-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// about info
+#about {
+    &-a {
+        .about-info {
+            display: grid;
+            grid-template-areas: "bioimage bio bio" "aw1 aw2 aw3";
+            grid-gap: 1.2rem;
+        }
+        // grid area
+        .bio
+    }
+}
+
+// main footer
+#main-footer {
+    background: $dark-color;
+    color: #fff;
+    height: 5rem;
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        height: 5rem;
+        align-items: center;
+        .social .fab {
+            margin-right: 1rem;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            // padding: 0.5rem;
+            &:hover {
+                background: $main-color;
+            }
+        }
+    }
+}

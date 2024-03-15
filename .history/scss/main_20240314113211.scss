@@ -1,0 +1,18 @@
+//import config file
+@import "config" //general style
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    font-family: "Dosis", sans-serif;
+    line-height: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-color;
+}
